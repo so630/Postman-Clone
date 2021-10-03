@@ -1,0 +1,39 @@
+.requests {
+    height: 32px;
+    padding: 4px;
+    border: none;
+    background-color: rgb(216, 216, 216);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    bottom: 1px;
+}
+
+option:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 100px rgb(202, 202, 202) inset;
+}
+
+input {
+    height: 25px;
+    width: 45%;
+}
+
+button {
+    height: 32px;
+}
+
+.api {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.form-control {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: white;
+}

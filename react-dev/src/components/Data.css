@@ -1,0 +1,8 @@
+input:focus {
+    outline: none;
+}
+
+.btn-dark {
+    background-color: rgb(100, 100, 100);
+    border-color:rgb(100, 100, 100);
+}

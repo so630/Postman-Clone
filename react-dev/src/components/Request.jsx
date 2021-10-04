@@ -46,8 +46,8 @@ function Request() {
         data = datanew;
     }
 
-    function submitHeaders(datanew) {
-        headers = datanew;
+    function submitHeaders(newdata) {
+        headers = newdata;
     }
 
     function send() {

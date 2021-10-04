@@ -3,11 +3,11 @@ import './Headers.css'
 
 function Data(props) {
 
-    let [headers, update] = React.useState({});
+    let [headers, updateHeaders] = React.useState({});
     let [count, updateCount] = React.useState([1]);
 
-    function handleChange() {
-        let rows = document.querySelectorAll('table tr')
+    function handlechange() {
+        let rows = document.querySelectorAll('#table3 tr')
         rows = Array(rows);
         rows.map((row) => {
             console.log(row.length)
@@ -19,7 +19,7 @@ function Data(props) {
                 temporaryObj[key] = value;
             })
 
-            update(temporaryObj);
+            updateHeaders(temporaryObj);
         })
     }
 
@@ -44,7 +44,7 @@ function Data(props) {
 
     return (
         <div>
-            <table border="1" width="96%" ID="Table2" style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '20px', fontFamily: 'Montserrat'}}>
+            <table border="1" width="96%" ID="table3" style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '20px', fontFamily: 'Montserrat'}}>
                 <th className="fifty">
                     Key
                 </th>
@@ -53,7 +53,7 @@ function Data(props) {
                 </th>
                 {count.map((key, index) => {
                     console.log(key)
-                    return <Dat id={index} handleChange={handleChange}/>
+                    return <Dat id={index} handlechange={handlechange}/>
                 })}
                 {console.log(headers)}
                 
@@ -73,8 +73,8 @@ function Data(props) {
 function Dat(props) {
     return (
         <tr>
-            <td><input name={"key" + props.id} type="text" style={{border: 'none', width: '100%'}} autoComplete="off" onChange={props.handleChange}></input></td>
-            <td><input name={"value" + props.id} type="text" style={{border: 'none', width: '100%'}} autoComplete="off" onChange={props.handleChange}></input></td>
+            <td><input name={"key" + props.id} type="text" style={{border: 'none', width: '100%'}} autoComplete="off" onChange={props.handlechange}></input></td>
+            <td><input name={"value" + props.id} type="text" style={{border: 'none', width: '100%'}} autoComplete="off" onChange={props.handlechange}></input></td>
         </tr>
     )
 }

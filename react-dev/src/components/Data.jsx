@@ -7,7 +7,7 @@ function Data(props) {
     let [count, updateCount] = React.useState([1]);
 
     function handleChange() {
-        let rows = document.querySelectorAll('table tr')
+        let rows = document.querySelectorAll('#Table2 tr')
         rows = Array(rows);
         rows.map((row) => {
             console.log(row.length)

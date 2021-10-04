@@ -10,9 +10,12 @@ app.use(express.static(__dirname + '/build'))
 
 app.post('/req', (req, res) => {
     const options = req.body;
+    console.log(options)
     axios.request(options).then((response) => {
         let json = CircularJSON.stringify(response)
         res.json(json)
+    }).catch((error) => {
+        res.json(error.json());
     })
 })
 

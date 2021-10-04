@@ -9,9 +9,10 @@ function Data(props) {
     function handlechange() {
         let rows = document.querySelectorAll('#table3 tr')
         rows = Array(rows);
+        let temporaryObj;
         rows.map((row) => {
             console.log(row.length)
-            let temporaryObj = {}
+            temporaryObj = {}
             row.forEach((row) => {
                 let key = row.childNodes[0].childNodes[0].value;
                 let value = row.childNodes[1].childNodes[0].value;
@@ -21,6 +22,7 @@ function Data(props) {
 
             updateHeaders(temporaryObj);
         })
+        props.submit(temporaryObj);
     }
 
     function handleClick(event) {
@@ -52,18 +54,15 @@ function Data(props) {
                     Values
                 </th>
                 {count.map((key, index) => {
-                    console.log(key)
                     return <Dat id={index} handlechange={handlechange}/>
                 })}
-                {console.log(headers)}
                 
             </table>
             <div style={{textAlign: 'right', marginTop: '10px', marginRight: '18px'}}>
                 <button name="delete" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginRight: '5px'}} onClick={handleClick}>Delete Data</button>
                 <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={handleClick}>Add Data</button>
                 <div style={{textAlign: 'left', marginLeft: '18px'}}>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={submit}>Submit</button>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginLeft: '8px'}} onClick={props.set}>Cancel</button>
+                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={props.set}>Cancel</button>
                 </div>
             </div>
         </div>

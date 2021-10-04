@@ -102,8 +102,12 @@ function Request() {
             <div style={{textAlign: 'center'}}>
                 {!isClick ? <button onClick={set3} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show headers</button> : <Headers set={set3} submit={submitHeaders}/>}
             </div>
-            <div style={{textAlign: 'left', marginTop: '60px', width: '94%', marginLeft: 'auto', marginRight: 'auto'}}>
-                <ReactJson src={response}/>
+            
+            <div style={{textAlign: 'left', marginTop: '60px'}}>
+                <h5 style={{color: 'gray'}}>Response</h5>
+                <div style={{height: '300px', overflow: 'scroll', borderTop: '1px solid #343a40'}}>
+                    <ReactJson src={response}/>
+                </div>
             </div>
         </div>
     )

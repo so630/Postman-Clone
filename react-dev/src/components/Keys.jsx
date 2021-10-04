@@ -9,11 +9,30 @@ function Keys(props) {
         let name = event.target.name.substring(0, 3) == 'key' ? event.target.name.substring(0, 3) : event.target.name.substring(0,5);
         let value = event.target.value;
         let index = event.target.name.substring(0, 3) == 'key' ? event.target.name.substring(3) : event.target.name.substring(5);
-        let tmp;
+        let tmp = [];
         update(prev => {
             prev[index][name] = value;
+            tmp = [...prev];
+            console.log(tmp)
+            let string = '?';
+            tmp.map((key, index) => {
+                if (!key['value'] || !key['key']) {
+                    return [...prev];
+                } else if (index == keys.length-1) {
+                    string += (key['key'] + '=' + key['value'])
+                } else {
+                    string += (key['key'] + '=' + key['value'] + '&')
+                }
+            })
+
+            if (string == '?') {
+                return [...prev];
+            }
+            console.log(string)
+            props.submit(string);
             return [...prev]
         })
+        
     }
 
     function handleClick(event) {
@@ -66,7 +85,6 @@ function Keys(props) {
                     Values
                 </th>
                 {keys.map((key, index) => {
-                    console.log(key)
                     return <Key id={index} handleChange={handleChange}/>
                 })}
                 
@@ -75,8 +93,7 @@ function Keys(props) {
                 <button name="delete" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginRight: '5px'}} onClick={handleClick}>Delete Key</button>
                 <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={handleClick}>Add Key</button>
                 <div style={{textAlign: 'left', marginLeft: '18px'}}>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={submit}>Submit</button>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginLeft: '8px'}} onClick={props.set}>Cancel</button>
+                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={props.set}>Cancel</button>
                 </div>
             </div>
         </div>

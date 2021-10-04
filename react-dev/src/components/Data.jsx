@@ -20,6 +20,7 @@ function Data(props) {
             })
 
             update(temporaryObj);
+            props.submit(temporaryObj);
         })
     }
 
@@ -62,8 +63,7 @@ function Data(props) {
                 <button name="delete" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginRight: '5px'}} onClick={handleClick}>Delete Data</button>
                 <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={handleClick}>Add Data</button>
                 <div style={{textAlign: 'left', marginLeft: '18px'}}>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={submit}>Submit</button>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginLeft: '8px'}} onClick={props.set}>Cancel</button>
+                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={props.set}>Cancel</button>
                 </div>
             </div>
         </div>

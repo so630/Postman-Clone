@@ -76,8 +76,8 @@ function Keys(props) {
     }
 
     return (
-        <div>
-            <table border="1" width="96%" ID="Table2" style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '20px', fontFamily: 'Montserrat'}}>
+        <div style={{textAlign: 'center'}}>
+            <table border="1" width="100%" ID="Table2" style={{marginTop: '20px', fontFamily: 'Montserrat'}}>
                 <th className="fifty">
                     Keys
                 </th>
@@ -89,10 +89,10 @@ function Keys(props) {
                 })}
                 
             </table>
-            <div style={{textAlign: 'right', marginTop: '10px', marginRight: '18px'}}>
+            <div style={{textAlign: 'right', marginTop: '10px'}}>
                 <button name="delete" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginRight: '5px'}} onClick={handleClick}>Delete Key</button>
                 <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={handleClick}>Add Key</button>
-                <div style={{textAlign: 'left', marginLeft: '18px'}}>
+                <div style={{textAlign: 'left'}}>
                     <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={props.set}>Cancel</button>
                 </div>
             </div>

@@ -1,0 +1,13 @@
+span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(2, 157, 230);
+}
+
+.add {
+    color: rgb(2, 157, 230);
+}
+
+div {
+    border-bottom: rgb(2, 157, 230);
+}

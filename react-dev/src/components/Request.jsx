@@ -93,13 +93,13 @@ function Request() {
                 <input id="url" type="url" className="form-control" style={{height: '32px', width: '45%', display: 'inline', borderRadius: '0'}}/>
                 <button type="button" className="btn btn-primary" style={{marginLeft: '47px', padding: '2px 10px', position: 'relative', bottom: '2.5px', borderRadius: '3px'}} onClick={send}>Send</button>
             </div>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'center', width: '55%', marginLeft: '20%', marginRight: '20%'}}>
                 {!isKey ? <button onClick={set} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show Keys</button> : <Keys submit={submit} set={set}/>}
             </div>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'center', width: '55%', marginLeft: '20%', marginRight: '20%'}}>
                 {!isData ? <button onClick={set2} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show Data</button> : <Data submit={submitData} set={set2}/>}
             </div>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'center', width: '55%', marginLeft: '20%', marginRight: '20%'}}>
                 {!isClick ? <button onClick={set3} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show headers</button> : <Headers set={set3} submit={submitHeaders}/>}
             </div>
             

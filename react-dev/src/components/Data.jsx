@@ -44,10 +44,10 @@ function Data(props) {
     }
 
     return (
-        <div>
+        <div style={{marginLeft: '5%', marginRight: '5%'}}>
             <table border="1" width="100%" ID="Table2" style={{marginTop: '20px', fontFamily: 'Montserrat'}}>
                 <th className="fifty">
-                    Key
+                    Data key
                 </th>
                 <th>
                     Values
@@ -62,9 +62,7 @@ function Data(props) {
             <div style={{textAlign: 'right', marginTop: '10px'}}>
                 <button name="delete" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right', marginRight: '5px'}} onClick={handleClick}>Delete Data</button>
                 <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={handleClick}>Add Data</button>
-                <div style={{textAlign: 'left'}}>
-                    <button name="add" type="button" class="btn btn-dark" style={{padding: '2px 8px', textAlign: 'right'}} onClick={props.set}>Cancel</button>
-                </div>
+            
             </div>
         </div>
     )

@@ -99,14 +99,13 @@ function Request() {
                 <input id="url" type="url" className="form-control" style={{height: '32px', width: '45%', display: 'inline', borderRadius: '0'}}/>
                 <button type="button" className="btn btn-primary" style={{marginLeft: '47px', padding: '2px 10px', position: 'relative', bottom: '2.5px', borderRadius: '3px'}} onClick={send}>Send</button>
             </div>
-            <div style={{textAlign: 'center', display: 'inline-block', width: '20%',  marginLeft: '-5%'}}>
-                <button onClick={set} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show Keys</button>
-            </div>
-            <div style={{textAlign: 'center', display: 'inline-block', width: '20%',  marginLeft: '-10%'}}>
-                <button onClick={set2} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show Data</button> 
-            </div>
-            <div style={{textAlign: 'center', display: 'inline-block', width: '20%', marginLeft: '-10%'}}>
-                <button onClick={set3} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px'}}>Show headers</button>
+            <div style={{textAlign: 'center'}}>
+                <button onClick={set} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px', marginRight: '2.5%'}}>Show Keys</button>
+        
+                <button onClick={set2} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px', marginRight: '2.5%'}}>Show Data</button> 
+            
+                <button onClick={set3} type="button" className="btn btn-primary" style={{padding: '2px 10px', borderRadius: '3px', marginTop: '30px', marginRight: '2.5%'}}>Show headers</button>
+            
             </div>
             <div style={{textAlign: 'center', width: '55%', marginRight: '20%', marginLeft: '20%'}}>
                 {!isKey ? null : <Keys submit={submit} set={set}/>}

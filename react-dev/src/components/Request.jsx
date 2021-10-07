@@ -14,8 +14,8 @@ function Request() {
     let [isClick, setClick] = React.useState(false);
     let [response, setRes] = React.useState({});
 
-    let data = {};
-    let headers = {};
+    let [data, setDat] = React.useState({});
+    let [headers, setHeaders] = React.useState({});
 
     function set() {
         if (!isKey) {
@@ -47,11 +47,15 @@ function Request() {
     }
 
     function submitData(datanew) {
-        data = datanew;
+        if (datanew != {}) {
+            setDat(datanew)
+        }
     }
 
     function submitHeaders(newdata) {
-        headers = newdata;
+        if (newdata != {}) {
+            setHeaders(newdata);
+        }
     }
 
     function send() {
